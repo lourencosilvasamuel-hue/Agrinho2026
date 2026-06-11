@@ -1,0 +1,291 @@
+
+/* ==========================================================================
+   RESET E VARIÁVEIS (TEMA SUSTENTÁVEL E CHAMATIVO)
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    /* Paleta de Cores da Natureza */
+    --verde-vibrante: #4CAF50;     /* Verde folha chamativo */
+    --verde-escuro: #2E7D32;       /* Verde floresta para textos e fundos */
+    --verde-claro: #E8F5E9;        /* Verde bem suave para fundos */
+    --amarelo-sol: #FFEB3B;        /* Contraste alegre e energético */
+    --marrom-terra: #5D4037;       /* Para detalhes de base */
+    --texto-escuro: #1b281b;       /* Quase preto, com toque esverdeado */
+    --fundo-branco: #FFFFFF;
+    
+    /* Fontes modernas e amigáveis */
+    --fonte-principal: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--fundo-branco);
+    color: var(--texto-escuro);
+    font-family: var(--fonte-principal);
+    line-height: 1.6;
+}
+
+/* ==========================================================================
+   CABEÇALHO E NAVEGAÇÃO
+   ========================================================================== */
+header {
+    background-color: var(--fundo-branco);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(76, 175, 80, 0.15); /* Sombra verde suave */
+}
+
+header .logo h1 {
+    color: var(--verde-escuro);
+    font-size: 1.8rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+header .logo p {
+    color: var(--verde-vibrante);
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--texto-escuro);
+    font-weight: 600;
+    font-size: 1rem;
+    transition: color 0.3s, transform 0.3s;
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+
+nav ul li a:hover {
+    color: var(--fundo-branco);
+    background-color: var(--verde-vibrante);
+}
+
+/* ==========================================================================
+   SEÇÃO HERO (IMPACTO VISUAL)
+   ========================================================================== */
+.hero {
+    /* Fundo com imagem coberta por uma camada verde transparente */
+    background: linear-gradient(rgba(46, 125, 50, 0.8), rgba(76, 175, 80, 0.7)), 
+                url('https://images.unsplash.com/photo-1592982537447-6f23f7e6f662?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%); /* Corte diagonal estiloso embaixo */
+}
+
+.hero-content {
+    max-width: 750px;
+}
+
+.hero h2 {
+    font-size: 3.8rem;
+    color: var(--fundo-branco);
+    margin-bottom: 20px;
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.4);
+}
+
+.hero p {
+    font-size: 1.3rem;
+    color: var(--amarelo-sol);
+    font-weight: 600;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+/* ==========================================================================
+   SEÇÕES DE CONTEÚDO PADRÃO
+   ========================================================================== */
+.conteudo-secao {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 8%;
+    gap: 60px;
+}
+
+.conteudo-secao.reverso {
+    flex-direction: row-reverse;
+    background-color: var(--verde-claro);
+}
+
+.conteudo-secao .texto {
+    flex: 1;
+}
+
+.conteudo-secao h2 {
+    font-size: 2.5rem;
+    color: var(--verde-escuro);
+    margin-bottom: 20px;
+    border-left: 6px solid var(--verde-vibrante); /* Detalhe chamativo no título */
+    padding-left: 15px;
+}
+
+.conteudo-secao p {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+.conteudo-secao ul li {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    list-style: none;
+    position: relative;
+    padding-left: 30px;
+}
+
+/* Ícone de folhinha nos itens da lista usando emoji ou caracter */
+.conteudo-secao ul li::before {
+    content: '🌿';
+    position: absolute;
+    left: 0;
+    top: 2px;
+}
+
+.imagem-container {
+    flex: 1;
+}
+
+.imagem-container img {
+    width: 100%;
+    border-radius: 30px; /* Bordas bem redondas (orgânicas) */
+    box-shadow: 0 15px 30px rgba(46, 125, 50, 0.2);
+    border: 5px solid var(--fundo-branco);
+}
+
+/* ==========================================================================
+   PRÁTICAS SUSTENTÁVEIS (CARDS VIBRANTES)
+   ========================================================================== */
+.fundo-escuro {
+    background-color: var(--verde-escuro);
+    padding: 80px 8%;
+    text-align: center;
+}
+
+.fundo-escuro h2 {
+    color: var(--fundo-branco);
+    font-size: 2.8rem;
+    margin-bottom: 50px;
+}
+
+.cards-container {
+    display: flex;
+    gap: 30px;
+}
+
+.card {
+    background-color: var(--fundo-branco);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex: 1;
+}
+
+.card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 20px 40px rgba(76, 175, 80, 0.4); /* Sombra verde forte ao passar o mouse */
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 4px solid var(--verde-vibrante);
+}
+
+.card h3 {
+    color: var(--verde-escuro);
+    margin: 20px 0 10px;
+    font-size: 1.5rem;
+}
+
+.card p {
+    padding: 0 20px 25px;
+    color: var(--texto-escuro);
+}
+
+/* ==========================================================================
+   RODAPÉ E BOTÃO CHAMATIVO
+   ========================================================================== */
+footer {
+    background-color: var(--marrom-terra); /* Lembra a terra que sustenta as plantas */
+    color: var(--fundo-branco);
+    padding: 50px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-info h3 {
+    color: var(--amarelo-sol);
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+#btn-saiba-mais {
+    background-color: var(--verde-vibrante);
+    color: var(--fundo-branco);
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 50px; /* Formato de pílula arredondado */
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(76, 175, 80, 0.4);
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+#btn-saiba-mais:hover {
+    background-color: var(--amarelo-sol);
+    color: var(--marrom-terra);
+    transform: scale(1.05);
+}
+
+/* ==========================================================================
+   RESPONSIVIDADE (CELULARES)
+   ========================================================================== */
+@media (max-width: 900px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .conteudo-secao, .conteudo-secao.reverso {
+        flex-direction: column;
+        padding: 50px 5%;
+    }
+    .cards-container {
+        flex-direction: column;
+    }
+    .hero {
+        clip-path: none; /* Tira o corte diagonal em telas pequenas para não comer texto */
+    }
+    .hero h2 {
+        font-size: 2.5rem;
+    }
+    footer {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+}
