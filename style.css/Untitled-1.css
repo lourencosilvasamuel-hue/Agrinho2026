@@ -1,0 +1,307 @@
+/* ==========================================================================
+   AGRINHO 2026 - MATA CILIAR
+   Estilo: Estética Florestal com Fundo Geométrico e Títulos Centralizados
+   ========================================================================== */
+
+/* Importando fontes do Google Fonts para dar um ar profissional */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Lora:ital,wght@0,400;0,600;1,400&display=swap');
+
+/* Variáveis de Cores (Paleta Florestal) */
+:root {
+    --verde-escuro: #132a13;   /* Cor de mata densa */
+    --verde-principal: #31572c;/* Verde folha clássico */
+    --verde-medio: #4f772d;    /* Verde claro natural */
+    --verde-claro: #90a955;    /* Tom de musgo claro */
+    --verde-fundo: #ecf3ed;    /* Fundo suave para leitura */
+    --branco: #ffffff;
+    --texto: #212529;
+}
+
+/* Configurações Gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lora', serif; /* Fonte elegante e natural para o texto */
+    color: var(--texto);
+    line-height: 1.6;
+    background-color: var(--verde-fundo);
+    
+    /* FUNDO GEOMÉTRICO EM TONS DE VERDE: 
+       Criando linhas e formas diagonais cruzadas usando CSS Gradients */
+    background-image: 
+        linear-gradient(135deg, rgba(144, 169, 85, 0.1) 25%, transparent 25%), 
+        linear-gradient(225deg, rgba(79, 119, 45, 0.08) 25%, transparent 25%),
+        linear-gradient(45deg, rgba(144, 169, 85, 0.05) 25%, transparent 25%),
+        linear-gradient(315deg, rgba(49, 87, 44, 0.06) 25%, var(--verde-fundo) 25%);
+    background-size: 120px 120px; /* Tamanho do padrão geométrico */
+    background-attachment: fixed;
+}
+
+/* Títulos com a fonte Montserrat (Moderna e Forte) */
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* ==========================================================================
+   CABEÇALHO E MENU
+   ========================================================================== */
+header {
+    background-color: rgba(19, 42, 19, 0.95); /* Verde escuro com leve transparência */
+    backdrop-filter: blur(5px); /* Efeito de vidro fosco moderno */
+    color: var(--branco);
+    padding: 20px 10px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 4px solid var(--verde-claro);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+/* TÍTULO BEM AO CENTRO (como você pediu) */
+header .logo {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+header .logo h1 {
+    font-size: 1.8rem;
+    color: var(--verde-claro);
+}
+
+header .logo p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* Menu de Navegação Centralizado */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+nav ul li a {
+    color: var(--branco);
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+nav ul li a:hover {
+    color: var(--verde-claro);
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* ==========================================================================
+   SEÇÃO HERO (CAPA DO SITE)
+   ========================================================================== */
+.hero {
+    background: linear-gradient(180deg, var(--verde-escuro) 0%, var(--verde-principal) 100%);
+    color: var(--branco);
+    padding: 60px 20px;
+    text-align: center; /* Centraliza todo o conteúdo da capa */
+    
+    /* Corte geométrico na parte inferior da seção */
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+    margin-bottom: 40px;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    max-width: 800px;
+    margin: 0 auto 20px auto; /* Centraliza o bloco do título */
+    color: var(--branco);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 650px;
+    margin: 0 auto 30px auto;
+    opacity: 0.9;
+}
+
+.hero img {
+    max-width: 100%;
+    width: 750px;
+    height: 350px;
+    object-fit: cover; /* Recorta a imagem para caber perfeitamente */
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    border: 3px solid var(--verde-claro);
+}
+
+/* ==========================================================================
+   SEÇÕES DE CONTEÚDO
+   ========================================================================== */
+section {
+    max-width: 900px;
+    margin: 0 auto 50px auto; /* Centraliza as seções na tela */
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.9); /* Fundo branco semi-transparente para ver o geométrico atrás */
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    border-left: 6px solid var(--verde-principal); /* Detalhe lateral */
+}
+
+/* Centralizando os títulos de cada seção */
+section h2 {
+    text-align: center;
+    color: var(--verde-escuro);
+    margin-bottom: 25px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+/* Linha decorativa embaixo dos títulos das seções */
+section h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: var(--verde-claro);
+    border-radius: 2px;
+}
+
+section p {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    text-align: justify; /* Melhora a leitura dos blocos de texto */
+}
+
+section img {
+    display: block;
+    max-width: 100%;
+    margin: 30px auto; /* Centraliza as imagens */
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Lista customizada na seção Agricultura */
+section ul {
+    margin: 20px auto;
+    max-width: 80%;
+    list-style: none;
+}
+
+section ul li {
+    margin-bottom: 12px;
+    font-size: 1.1rem;
+    position: relative;
+    padding-left: 25px;
+}
+
+/* Ícone de folha geométrica antes de cada item da lista */
+section ul li::before {
+    content: '◆';
+    position: absolute;
+    left: 0;
+    color: var(--verde-medio);
+    font-size: 0.9rem;
+}
+
+/* ==========================================================================
+   CARDS DE BENEFÍCIOS (Grade Dinâmica)
+   ========================================================================== */
+.cards-beneficios {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsivo automático */
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.card {
+    background-color: var(--branco);
+    padding: 20px;
+    border-radius: 8px;
+    border-top: 4px solid var(--verde-medio);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efeito de flutuar ao passar o mouse nos cards */
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(49, 87, 44, 0.15);
+}
+
+.card h3 {
+    font-size: 1rem;
+    color: var(--verde-principal);
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.card p {
+    font-size: 0.95rem;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+/* ==========================================================================
+   RODAPÉ
+   ========================================================================== */
+footer {
+    background-color: var(--verde-escuro);
+    color: var(--branco);
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 60px;
+    border-top: 4px solid var(--verde-claro);
+}
+
+footer p {
+    font-size: 0.9rem;
+    opacity: 0.7;
+    margin-bottom: 5px;
+}
+
+footer strong {
+    color: var(--verde-claro);
+}
+
+/* ==========================================================================
+   RESPONSIVIDADE (Ajustes para Celular)
+   ========================================================================== */
+@media (max-width: 600px) {
+    .hero h2 { font-size: 1.8rem; }
+    section { padding: 20px; }
+    header .logo h1 { font-size: 1.4rem; }
+    nav ul { gap: 10px; }
+}
+/* ==========================================================================
+   CLASSES PARA ANIMAÇÃO VIA JAVASCRIPT
+   ========================================================================== */
+.oculto {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.revelado {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Efeito extra para o botão */
+#btn-curiosidade:hover {
+    background-color: var(--verde-escuro) !important;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
